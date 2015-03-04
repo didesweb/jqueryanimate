@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<!-- Didesweb -->  
+<!-- Diseño y desarrollo web -->  
+<!-- http://didesweb.com/-->  
+<!-- Este obra está protegida bajo licencia Creative Commons Attribution --> 
+<html lang="es">
+<head>
+	<title>Didesweb, animaciones con el metodo animate() en jQuery</title>
+	<meta charset="utf-8">
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script> 
+</head>
+<body>
+	<h1>Didesweb, animaciones con el metodo animate() en jQuery</h1>
+	<script>
+		$(document).ready(function(){
+		   $("#boton1").click(function(){
+			  $("#caja").animate({height: "100px", width: "100px"}, "slow");
+			  $("#caja").animate({marginLeft: "200px"}, "fast");
+			  $("#caja").animate({marginLeft: "0px"}, 1500);
+		   });
+		   $("#boton2").click(function(){
+			  $("#caja").animate({height: "50px", width: "50px", marginLeft: "0"});
+		   });
+		});
+	</script>
+	<button id="boton1" class="boton">OK</button>
+	<button id="boton2" class="boton">Reset</button><br><br>
+	<div id="caja" style="background:#0099CC;height:50px;width:50px;"></div>
+	<br>
+	<script>
+		$(document).ready(function(){
+			$("#boton3").click(function(){
+				$("#caja2").animate({height: "100px", width: "100px"}, "slow");
+				$("#caja2").css("background", "#6633FF");
+				$("#caja2").animate({marginLeft: "200px"}, "fast");
+				$("#caja2").animate({marginLeft: "0px"}, 1500);
+				$("#txtdisp").animate({fontSize: "16px"}, "slow");
+				$("#caja2").css("border-color", "#FFFF00");
+			});
+			$("#boton4").click(function(){
+				$("#caja2").animate({height: "50px", width: "50px", marginLeft: "0"});
+				$("#caja2").css("background", "#0099CC");
+				$("#caja2").css("border-color", "#00FF00");
+				$("#txtdisp").animate({fontSize: "0px"}, "slow");
+			});
+		});
+	</script>
+	<button id="boton3" class="boton">OK</button>
+	<button id="boton4" class="boton">Reset</button><br><br>
+	<div id="caja2" style="background: #0099CC;height: 50px;width: 50px;border: 3px solid #00FF00">
+		<span style=" font-size: 0px;padding: 10px;color:#FFFFFF;" id="txtdisp">Didesweb</span>
+	</div>  
+</body>
+</html>
